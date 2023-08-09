@@ -1,7 +1,9 @@
 {
   "projects": {
     "vuejs": "lastpeople",
-    "default": "lastpeople"
+    "default": "lastpeople",
+    "lastpeople": "lastpeople"
   },
-  "targets": {}
+  "targets": {},
+  "etags": {}
 }
