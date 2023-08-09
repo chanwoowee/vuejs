@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "vuejs": "lastpeople",
+    "default": "lastpeople"
+  },
+  "targets": {}
+}

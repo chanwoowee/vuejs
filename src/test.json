@@ -1,0 +1,359 @@
+-------  ProStService$$EnhancerBySpringCGLIB$$d9900723--------
+{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "should" : [
+            {
+              "bool" : {
+                "must" : [
+                  {
+                    "multi_match" : {
+                      "query" : "1박2일",
+                      "fields" : [
+                        "archiveId*^1.0",
+                        "clipTitle*^1.0",
+                        "direct*^1.0",
+                        "keyword*^1.0",
+                        "maker*^1.0",
+                        "material*^1.0",
+                        "organize*^1.0",
+                        "programId*^1.0",
+                        "programName*^1.0",
+                        "programTitle*^1.0",
+                        "segmentItem*^1.0",
+                        "sequenceNumber*^1.0",
+                        "sequenceString*^1.0",
+                        "staff*^1.0",
+                        "subtitle*^1.0",
+                        "tag*^1.0",
+                        "textContent*^1.0",
+                        "textFiled*^1.0",
+                        "textSummary*^1.0"
+                      ],
+                      "type" : "cross_fields",
+                      "operator" : "AND",
+                      "analyzer" : "standard",
+                      "slop" : 0,
+                      "prefix_length" : 0,
+                      "max_expansions" : 50,
+                      "zero_terms_query" : "NONE",
+                      "auto_generate_synonyms_phrase_query" : true,
+                      "fuzzy_transpositions" : true,
+                      "boost" : 1.0
+                    }
+                  },
+                  {
+                    "bool" : {
+                      "must" : [
+                        {
+                          "bool" : {
+                            "adjust_pure_negative" : true,
+                            "boost" : 1.0
+                          }
+                        },
+                        {
+                          "term" : {
+                            "classificationCode" : {
+                              "value" : "02",
+                              "boost" : 1.0
+                            }
+                          }
+                        }
+                      ],
+                      "adjust_pure_negative" : true,
+                      "boost" : 1.0
+                    }
+                  }
+                ],
+                "adjust_pure_negative" : true,
+                "boost" : 1.0
+              }
+            }
+          ],
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+
+
+-------  ProStService$$EnhancerBySpringCGLIB$$d9900723--------
+{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "must" : [
+            {
+              "wrapper" : {
+                "query" : "ewogICJib29sIiA6IHsKICAgICJtdXN0IiA6IFsKICAgICAgewogICAgICAgICJib29sIiA6IHsKICAgICAgICAgICJzaG91bGQiIDogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgImJvb2wiIDogewogICAgICAgICAgICAgICAgIm11c3QiIDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgIm11bHRpX21hdGNoIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICJxdWVyeSIgOiAiMeuwlTLsnbwiLAogICAgICAgICAgICAgICAgICAgICAgImZpZWxkcyIgOiBbCiAgICAgICAgICAgICAgICAgICAgICAgICJhcmNoaXZlSWQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJjbGlwVGl0bGUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJkaXJlY3QqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJrZXl3b3JkKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAibWFrZXIqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJtYXRlcmlhbCpeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgIm9yZ2FuaXplKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAicHJvZ3JhbUlkKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAicHJvZ3JhbU5hbWUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJwcm9ncmFtVGl0bGUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJzZWdtZW50SXRlbSpeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgInNlcXVlbmNlTnVtYmVyKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAic2VxdWVuY2VTdHJpbmcqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJzdGFmZipeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgInN1YnRpdGxlKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAidGFnKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAidGV4dENvbnRlbnQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0RmlsZWQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0U3VtbWFyeSpeMS4wIgogICAgICAgICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJjcm9zc19maWVsZHMiLAogICAgICAgICAgICAgICAgICAgICAgIm9wZXJhdG9yIiA6ICJBTkQiLAogICAgICAgICAgICAgICAgICAgICAgImFuYWx5emVyIiA6ICJzdGFuZGFyZCIsCiAgICAgICAgICAgICAgICAgICAgICAic2xvcCIgOiAwLAogICAgICAgICAgICAgICAgICAgICAgInByZWZpeF9sZW5ndGgiIDogMCwKICAgICAgICAgICAgICAgICAgICAgICJtYXhfZXhwYW5zaW9ucyIgOiA1MCwKICAgICAgICAgICAgICAgICAgICAgICJ6ZXJvX3Rlcm1zX3F1ZXJ5IiA6ICJOT05FIiwKICAgICAgICAgICAgICAgICAgICAgICJhdXRvX2dlbmVyYXRlX3N5bm9ueW1zX3BocmFzZV9xdWVyeSIgOiB0cnVlLAogICAgICAgICAgICAgICAgICAgICAgImZ1enp5X3RyYW5zcG9zaXRpb25zIiA6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAgICAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICBdLAogICAgICAgICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgfQogICAgICB9CiAgICBdLAogICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAiYm9vc3QiIDogMS4wCiAgfQp9"
+              }
+            }
+          ],
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      {
+        "bool" : {
+          "must" : [
+            {
+              "bool" : {
+                "adjust_pure_negative" : true,
+                "boost" : 1.0
+              }
+            },
+            {
+              "term" : {
+                "classificationCode" : {
+                  "value" : "02",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+
+
+
+
+
+
+
+-------  ProStService$$EnhancerBySpringCGLIB$$d9900723--------
+{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "must" : [
+            {
+              "wrapper" : {
+                "query" : "ewogICJib29sIiA6IHsKICAgICJtdXN0IiA6IFsKICAgICAgewogICAgICAgICJib29sIiA6IHsKICAgICAgICAgICJzaG91bGQiIDogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgImJvb2wiIDogewogICAgICAgICAgICAgICAgIm11c3QiIDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgIm11bHRpX21hdGNoIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICJxdWVyeSIgOiAiMeuwlTLsnbwiLAogICAgICAgICAgICAgICAgICAgICAgImZpZWxkcyIgOiBbCiAgICAgICAgICAgICAgICAgICAgICAgICJhcmNoaXZlSWQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJjbGlwVGl0bGUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJkaXJlY3QqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJrZXl3b3JkKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAibWFrZXIqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJtYXRlcmlhbCpeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgIm9yZ2FuaXplKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAicHJvZ3JhbUlkKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAicHJvZ3JhbU5hbWUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJwcm9ncmFtVGl0bGUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJzZWdtZW50SXRlbSpeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgInNlcXVlbmNlTnVtYmVyKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAic2VxdWVuY2VTdHJpbmcqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJzdGFmZipeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgInN1YnRpdGxlKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAidGFnKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAidGV4dENvbnRlbnQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0RmlsZWQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0U3VtbWFyeSpeMS4wIgogICAgICAgICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJjcm9zc19maWVsZHMiLAogICAgICAgICAgICAgICAgICAgICAgIm9wZXJhdG9yIiA6ICJBTkQiLAogICAgICAgICAgICAgICAgICAgICAgImFuYWx5emVyIiA6ICJzdGFuZGFyZCIsCiAgICAgICAgICAgICAgICAgICAgICAic2xvcCIgOiAwLAogICAgICAgICAgICAgICAgICAgICAgInByZWZpeF9sZW5ndGgiIDogMCwKICAgICAgICAgICAgICAgICAgICAgICJtYXhfZXhwYW5zaW9ucyIgOiA1MCwKICAgICAgICAgICAgICAgICAgICAgICJ6ZXJvX3Rlcm1zX3F1ZXJ5IiA6ICJOT05FIiwKICAgICAgICAgICAgICAgICAgICAgICJhdXRvX2dlbmVyYXRlX3N5bm9ueW1zX3BocmFzZV9xdWVyeSIgOiB0cnVlLAogICAgICAgICAgICAgICAgICAgICAgImZ1enp5X3RyYW5zcG9zaXRpb25zIiA6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAgICAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICBdLAogICAgICAgICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgfQogICAgICB9CiAgICBdLAogICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAiYm9vc3QiIDogMS4wCiAgfQp9"
+              }
+            }
+          ],
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      {
+        "bool" : {
+          "must" : [
+            {
+              "bool" : {
+                "adjust_pure_negative" : true,
+                "boost" : 1.0
+              }
+            },
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "term" : {
+                      "qualityCode" : {
+                        "value" : "HD",
+                        "boost" : 1.0
+                      }
+                    }
+                  },
+                  {
+                    "term" : {
+                      "quality" : {
+                        "value" : "HD",
+                        "boost" : 1.0
+                      }
+                    }
+                  },
+                  {
+                    "regexp" : {
+                      "quality" : {
+                        "value" : "(.*)(,|^)HD(,|$)(.*)",
+                        "flags_value" : 65535,
+                        "max_determinized_states" : 10000,
+                        "boost" : 1.0
+                      }
+                    }
+                  },
+                  {
+                    "regexp" : {
+                      "quality" : {
+                        "value" : "HD(,|$)(.*)",
+                        "flags_value" : 65535,
+                        "max_determinized_states" : 10000,
+                        "boost" : 1.0
+                      }
+                    }
+                  },
+                  {
+                    "regexp" : {
+                      "quality" : {
+                        "value" : "(.*)(,|^)HD",
+                        "flags_value" : 65535,
+                        "max_determinized_states" : 10000,
+                        "boost" : 1.0
+                      }
+                    }
+                  }
+                ],
+                "adjust_pure_negative" : true,
+                "boost" : 1.0
+              }
+            }
+          ],
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+
+
+
+
+{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "should" : [
+            {
+              "bool" : {
+                "must" : [
+                  {
+                    "multi_match" : {
+                      "query" : "1박2일",
+                      "fields" : [
+                        "archiveId*^1.0",
+                        "clipTitle*^1.0",
+                        "direct*^1.0",
+                        "keyword*^1.0",
+                        "maker*^1.0",
+                        "material*^1.0",
+                        "organize*^1.0",
+                        "programId*^1.0",
+                        "programName*^1.0",
+                        "programTitle*^1.0",
+                        "segmentItem*^1.0",
+                        "sequenceNumber*^1.0",
+                        "sequenceString*^1.0",
+                        "staff*^1.0",
+                        "subtitle*^1.0",
+                        "tag*^1.0",
+                        "textContent*^1.0",
+                        "textFiled*^1.0",
+                        "textSummary*^1.0"
+                      ],
+                      "type" : "cross_fields",
+                      "operator" : "AND",
+                      "analyzer" : "standard",
+                      "slop" : 0,
+                      "prefix_length" : 0,
+                      "max_expansions" : 50,
+                      "zero_terms_query" : "NONE",
+                      "auto_generate_synonyms_phrase_query" : true,
+                      "fuzzy_transpositions" : true,
+                      "boost" : 1.0
+                    }
+                  },
+                  {
+                    "bool" : {
+                      "must" : [
+                        {
+                          "bool" : {
+                            "adjust_pure_negative" : true,
+                            "boost" : 1.0
+                          }
+                        },
+                        {
+                          "term" : {
+                            "qualityCode" : {
+                              "value" : "HD",
+                              "boost" : 1.0
+                            }
+                          }
+                        }
+                      ],
+                      "adjust_pure_negative" : true,
+                      "boost" : 1.0
+                    }
+                  }
+                ],
+                "adjust_pure_negative" : true,
+                "boost" : 1.0
+              }
+            }
+          ],
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+
+
+
+
+{
+  "bool" : {
+    "must" : [
+      {
+        "bool" : {
+          "must" : [
+            {
+              "wrapper" : {
+                "query" : "ewogICJib29sIiA6IHsKICAgICJtdXN0IiA6IFsKICAgICAgewogICAgICAgICJib29sIiA6IHsKICAgICAgICAgICJzaG91bGQiIDogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgImJvb2wiIDogewogICAgICAgICAgICAgICAgIm11c3QiIDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgIm11bHRpX21hdGNoIiA6IHsKICAgICAgICAgICAgICAgICAgICAgICJxdWVyeSIgOiAiMeuwlTLsnbwiLAogICAgICAgICAgICAgICAgICAgICAgImZpZWxkcyIgOiBbCiAgICAgICAgICAgICAgICAgICAgICAgICJhcmNoaXZlSWQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJjbGlwVGl0bGUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJkaXJlY3QqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJrZXl3b3JkKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAibWFrZXIqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJtYXRlcmlhbCpeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgIm9yZ2FuaXplKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAicHJvZ3JhbUlkKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAicHJvZ3JhbU5hbWUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJwcm9ncmFtVGl0bGUqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJzZWdtZW50SXRlbSpeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgInNlcXVlbmNlTnVtYmVyKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAic2VxdWVuY2VTdHJpbmcqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJzdGFmZipeMS4wIiwKICAgICAgICAgICAgICAgICAgICAgICAgInN1YnRpdGxlKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAidGFnKl4xLjAiLAogICAgICAgICAgICAgICAgICAgICAgICAidGV4dENvbnRlbnQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0RmlsZWQqXjEuMCIsCiAgICAgICAgICAgICAgICAgICAgICAgICJ0ZXh0U3VtbWFyeSpeMS4wIgogICAgICAgICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAgICAgICAgICJ0eXBlIiA6ICJjcm9zc19maWVsZHMiLAogICAgICAgICAgICAgICAgICAgICAgIm9wZXJhdG9yIiA6ICJBTkQiLAogICAgICAgICAgICAgICAgICAgICAgImFuYWx5emVyIiA6ICJzdGFuZGFyZCIsCiAgICAgICAgICAgICAgICAgICAgICAic2xvcCIgOiAwLAogICAgICAgICAgICAgICAgICAgICAgInByZWZpeF9sZW5ndGgiIDogMCwKICAgICAgICAgICAgICAgICAgICAgICJtYXhfZXhwYW5zaW9ucyIgOiA1MCwKICAgICAgICAgICAgICAgICAgICAgICJ6ZXJvX3Rlcm1zX3F1ZXJ5IiA6ICJOT05FIiwKICAgICAgICAgICAgICAgICAgICAgICJhdXRvX2dlbmVyYXRlX3N5bm9ueW1zX3BocmFzZV9xdWVyeSIgOiB0cnVlLAogICAgICAgICAgICAgICAgICAgICAgImZ1enp5X3RyYW5zcG9zaXRpb25zIiA6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAgICAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICBdLAogICAgICAgICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAgICAgICAiYm9vc3QiIDogMS4wCiAgICAgICAgfQogICAgICB9CiAgICBdLAogICAgImFkanVzdF9wdXJlX25lZ2F0aXZlIiA6IHRydWUsCiAgICAiYm9vc3QiIDogMS4wCiAgfQp9"
+              }
+            }
+          ],
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      },
+      {
+        "bool" : {
+          "must" : [
+            {
+              "bool" : {
+                "adjust_pure_negative" : true,
+                "boost" : 1.0
+              }
+            },
+            {
+              "term" : {
+                "genre1" : {
+                  "value" : "A",
+                  "boost" : 1.0
+                }
+              }
+            }
+          ],
+          "adjust_pure_negative" : true,
+          "boost" : 1.0
+        }
+      }
+    ],
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}

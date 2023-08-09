@@ -1,5 +1,24 @@
-# vuejs
+# firebase
 
-2023.08.09. 13:22
+## Project setup
+```
+yarn install
+```
 
-2023.08.09. 13:23 VSC update
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
