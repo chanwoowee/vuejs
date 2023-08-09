@@ -1,5 +1,3 @@
-# firebase
-
 ## Project setup
 ```
 yarn install
