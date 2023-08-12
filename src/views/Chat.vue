@@ -109,7 +109,7 @@ import ChatLine from "../components/ChatLine"
           }
           if (body.keyword) {
             // console.log("message.body in receiveMessage : ", body)
-            this.messages.push(body.keyword)
+            this.messages.push({id: body.clientId, keyword: body.keyword})
             this.messages_count = this.messages.length - 1
 
             // document.querySelector("#app > div > section > div > div").scrollTop = 10000

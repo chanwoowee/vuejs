@@ -1,5 +1,5 @@
 <template>
-  <a>{{ idx }} || {{ received }}</a><br>
+  <a>[{{ received.id }}] {{ received.keyword }}</a><br>
   
 </template>
 
